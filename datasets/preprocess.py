@@ -199,7 +199,7 @@ def brspeech(root_path, meta_file):
                 continue
             cols = line.split('|')
             #print(cols)
-            wav_file = os.path.join(root_path, cols[0])
+            wav_file = os.path.join(root_path, 'wavs', cols[0] + '.wav')
             text = cols[2]
             speaker_name = cols[3]
             items.append([text, wav_file, speaker_name])

@@ -107,7 +107,7 @@
     "tb_model_param_stats": false,     // true, plots param stats per layer on tensorboard. Might be memory consuming, but good for debugging.
 
     // DATA LOADING
-    "text_cleaner": "phoneme_cleaners",
+    "text_cleaner": "portuguese_cleaners",
     "enable_eos_bos_chars": false, // enable/disable beginning of sentence and end of sentence chars.
     "num_loader_workers": 4,        // number of training data loader processes. Don't set it too big. 4-8 are good values.
     "num_val_loader_workers": 4,    // number of evaluation data loader processes.
@@ -121,7 +121,7 @@
     // PHONEMES
     "phoneme_cache_path": "./logs-brspeech/mozilla_us_phonemes_3",  // phoneme computation is slow, therefore, it caches results in the given folder.
     "use_phonemes": false,           // use phonemes instead of raw characters. It is suggested for better pronounciation.
-    "phoneme_language": "en-us",     // depending on your target language, pick one from  https://github.com/bootphon/phonemizer#languages
+    "phoneme_language": "pt-br",     // depending on your target language, pick one from  https://github.com/bootphon/phonemizer#languages
 
     // MULTI-SPEAKER and GST
     "use_speaker_embedding": false,     // use speaker embedding to enable multi-speaker learning.
@@ -132,8 +132,8 @@
     "datasets":   // List of datasets. They all merged and they get different speaker_ids.
         [
             {
-                "name": "ljspeech",
-                "path": "./BRSpeech/JC",
+                "name": "brspeech",
+                "path": "/home/fred/BRSpeech-TTS-3.0-beta5/LN/",
                 "meta_file_train": "metadata.csv",
                 "meta_file_val": null
             }
